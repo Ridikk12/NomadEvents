@@ -12,8 +12,7 @@ public class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
         _dbContext = dbContext;
     }
-
-
+    
     public async Task Add(T entity)
     {
         await _dbContext.Set<T>().AddAsync(entity);
