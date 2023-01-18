@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NomadEvents.MinimalAPI.Infrastructure.Auth;
 
@@ -19,6 +20,7 @@ public static class StartupConfiguration
             {
                 var connectionString = builder.Configuration.GetConnectionString("EventsConnectionString");
                 ArgumentNullException.ThrowIfNull(connectionString);
+                options.UseSqlServer(connectionString);
             });
         }
     }

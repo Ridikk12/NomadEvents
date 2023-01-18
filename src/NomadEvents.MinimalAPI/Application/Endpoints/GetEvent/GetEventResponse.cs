@@ -18,8 +18,8 @@ public class GetEventResponse
             Address = @event.Address,
             Description = @event.Description,
             Id = @event.Id,
-            Url = @event.Url,
-            EventDate = @event.Url,
+            Url = @event.MapsUrl,
+            EventDate = @event.MapsUrl,
             Name = @event.Name
         };
     }

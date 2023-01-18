@@ -13,7 +13,7 @@ public record AddNomadEventRequest(string Name, string Description, string Creat
             Name = Name,
             Id = Guid.NewGuid(),
             Price = Price,
-            Url = Url,
+            MapsUrl = Url,
             CreatedDate = DateTime.Now,
             EventDate = EventDate
         };
